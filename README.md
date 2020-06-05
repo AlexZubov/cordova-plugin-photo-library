@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.org/terikon/cordova-plugin-photo-library.svg?branch=master)](https://travis-ci.org/terikon/cordova-plugin-photo-library)
 
+Solving the problem with Using "requireCordovaModule" to load non-cordova module "glob" is not supported. Instead, add this module to your dependencies and use regular "require" to load it:
+
+cordova plugin rm cordova-plugin-add-swift-support
+cordova plugin rm cordova-plugin-photo-library
+
+cordova plugin add cordova-plugin-add-swift-support@2.0.2
+cordova plugin add https://github.com/nilebma/cordova-plugin-photo-library.git
+
 Known issues:
 - This plugin does not work with WKWebView. Please do not use it if you planning to switch to WKWebView, until someone will resolve this issue.
 
