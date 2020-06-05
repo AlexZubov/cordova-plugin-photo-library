@@ -220,9 +220,9 @@ final class PhotoLibraryService {
                         completion(nil)
                     }
                     else {
-                        let file_url:URL = info!["PHImageFileURLKey"] as! URL
-//                        let mime_type = self.mimeTypes[file_url.pathExtension.lowercased()]!
-                        completion(file_url.relativePath)
+                        // edit by ExOneB
+                        let file_url:NSString = (info!["PHImageFileUTIKey"] as? NSString)!
+                        completion(file_url as String, libraryItem)
                     }
                 }
             }
